@@ -40,7 +40,7 @@
 		<main class="main-webstudio">
 			<section class="heading container">
 				<h1 class="first-header">Effective Solutions for Your Business</h1>
-				<button class="order-service-button">Order Service</button>
+				<button class="order-service-button" data-modal-open>Order Service</button>
 			</section>
 			<section class="advantages container">
 				<ul class="cards-description">
@@ -323,6 +323,14 @@
 				</ul>
 			</aside>
 		</footer>
-		<script src="../goit-markup-hw-05/JS/modal.js"></script>
+
+	<!-- Modal -->
+		<div class="modal is-hidden" data-modal>
+			<div class="modal-content"  formtarget="_blank">
+				<button class="close-button" data-modal-close>&times;</button>
+			</div>
+		</div>
+		<script src="./JS/modal.js"></script>
+	<!-- Modal -->
 	</body>
 </html>

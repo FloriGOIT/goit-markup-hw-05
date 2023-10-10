@@ -383,5 +383,23 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .icons-footer:focus circle,               
 .icons-footer:hover circle {fill: var(--color-iris);} /*transition*/
 
+/* Modal */
+.modal {position: fixed;
+        background-color:rgba(46, 47, 66, 0.5);
+        max-width: 1500px;
+        height: 100vh;
+        margin: 0px auto;
+        top:0;
+        left: 186px;}
+
+.modal-content {position: absolute;
+                background-color: white;
+                width: 408px;
+                height: 584px;
+                top:80px;
+                left:536px;}
+.is-hidden {visibility: hidden;}
+.close-button {background-color: blue;}
+
 
 
