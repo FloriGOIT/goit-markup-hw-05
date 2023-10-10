@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .nav-link:focus,
 .nav-link:hover,
 .nav-link:active {border-bottom: 1px;
-        border-style: solid;}
+                  border-style: solid;}
                    /*temporari border*/
 
                   .current {color: var(--color-iris);}
@@ -191,25 +191,26 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
                                      row-gap: 48px;
                                      padding-bottom: 120px;}
 
-.cards-portofolio .cards-description li {position: relative;
+.cards-portofolio .cards-description li>aside {position: relative;
                                          overflow: hidden;}
-.cards-portofolio .cards-description li .overlay {position: absolute;
+.cards-portofolio .cards-description li>aside .overlay {position: absolute;
                                                   top: 0px;
                                                   left:0;
                                                   width: 100%;
                                                   height: 100%;
-                                                  background-color: rgb(77, 90, 229, 0.7);
+                                                  background-color: rgb(77, 90, 229, 0.9);
                                                   transform: translatey(100%);
                                                   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
-.cards-portofolio .cards-description li:hover .overlay {transform: translatey(0%);}
+.cards-portofolio .cards-description li>aside:hover .overlay {transform: translatey(0%);}
 
-.cards-portofolio .cards-description li.overlay p {display: inline-block;
-                                                   display: flex;
-                                                   flex-direction: row;
-                                                   justify-content: center;
-                                                   margin    : 30px auto;
-                                                   font: var(--ro700-s16-lh17);
-                                                   color: white;}                                
+.cards-portofolio .cards-description li>aside .overlay p {display: inline-block;
+                                                          display: flex;
+                                                          flex-direction: row;
+                                                          justify-content: center;
+                                                          padding-left: 32px;
+                                                          padding-top: 40px;
+                                                          font: var(--ro400-s16-lh24);
+                                                          color: white;}                                
 .cards-portofolio .cards-description .description:hover {box-shadow:0px 2px 1px 0px #2E2F4214,
         0px 4px 1px 0px #2E2F4229, 
         0px 6px 6px 0px #2E2F4214;}
