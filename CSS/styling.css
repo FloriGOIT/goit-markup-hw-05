@@ -12,11 +12,12 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 :root {--main-color: #2E2F42;
        --heighlight-bgcolor: #404BBF;
        --heighlight-color: white;
+       --ro700-s16-lh17: normal normal 700 16px/17px Roboto, sans-serif;
        --ro400-s16-lh24: normal normal 400 16px/24px Roboto, sans-serif;
        --ro500-s20-lh24: normal normal 500 20px/24px Roboto, sans-serif;
        --ro500-s16-lh24: normal normal 500 16px/24px Roboto, sans-serif;
        --logo-ra700-s18-lh21: normal normal 800 18px/21px 'Raleway', sans-serif;
-       --color-iris:#4D5AE5;
+       --color-iris:rgb(77, 90, 229);
        --first-heading: normal normal 700 56px/60px Roboto, sans-serif;
        --second-heading: normal normal 700 36px/40px Roboto, sans-serif;}
 
@@ -159,12 +160,7 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .cards-description img {display: block;
                         max-width: 100%;}
 
-.cards-portofolio .cards-description {display: grid;
-                                     grid-template-columns: auto auto auto;
-                                     row-gap: 48px;
-                                     padding-bottom: 120px;}
 
-/*.main-portofolio .description img {display: block;}*/
 .main-portofolio .cards-description div {padding: 32px 16px;}
 
 .buttons-line button {font: var(--ro500-s16-lh24);
@@ -189,14 +185,61 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .card-description-portofolio {border-width:0px 1px 1px;
                               border-color: #E7E9FC;
                               border-style: solid;}
-
-.cards-portofolio .cards-description >li:hover {box-shadow:0px 2px 1px 0px #2E2F4214,
-                                                           0px 4px 1px 0px #2E2F4229, 
-                                                           0px 6px 6px 0px #2E2F4214;}
                               
+.cards-portofolio .cards-description {display: grid;
+                                     grid-template-columns: auto auto auto;
+                                     row-gap: 48px;
+                                     padding-bottom: 120px;}
 
-.business-info li {margin-bottom: 0px;
-                   padding-bottom: 0px;}
+.cards-portofolio .cards-description li {position: relative;
+                                         overflow: hidden;}
+.cards-portofolio .cards-description li .overlay {position: absolute;
+                                                  top: 0px;
+                                                  left:0;
+                                                  width: 100%;
+                                                  height: 100%;
+                                                  background-color: rgb(77, 90, 229, 0.7);
+                                                  transform: translatey(100%);
+                                                  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+.cards-portofolio .cards-description li:hover .overlay {transform: translatey(0%);}
+
+.cards-portofolio .cards-description li.overlay p {display: inline-block;
+                                                   display: flex;
+                                                   flex-direction: row;
+                                                   justify-content: center;
+                                                   margin    : 30px auto;
+                                                   font: var(--ro700-s16-lh17);
+                                                   color: white;}                                
+.cards-portofolio .cards-description .description:hover {box-shadow:0px 2px 1px 0px #2E2F4214,
+        0px 4px 1px 0px #2E2F4229, 
+        0px 6px 6px 0px #2E2F4214;}
+
+.business-info li {position: relative;
+                   margin-bottom: 0px;
+                   padding-bottom: 0px;
+                   position: relative;
+                   overflow: hidden;}
+
+.business-info li .overlay {position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: rgb(77, 90, 229, 0.7);
+                            transform: translatey(100%);
+                            transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                            overflow: hidden;}
+
+.business-info li .overlay p {display: inline-block;
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              margin: 30px auto;
+                              font: var(--ro700-s16-lh17);
+                              color: white;}
+.business-info li:hover .overlay {transform: translatey(75%);}
+
+
 
 .card-description-studio h3 {font: var(--ro500-s20-lh24);
                              color: var(--main-color);
@@ -308,7 +351,7 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
 .footer .logo-descriprion {padding-top: 100px;
         padding-bottom: 100px;}
 .footer .social {padding-top: 100px;
-                padding-bottom: 132px;}
+                padding-bottom: 128px;}
 
 .icons-footer:focus circle,               
 .icons-footer:hover circle {fill: var(--color-iris);}
