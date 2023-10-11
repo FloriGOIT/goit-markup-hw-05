@@ -400,7 +400,8 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
         margin-left:calc((100vw - 1470px)/2);
         height: 100%;
         top: 0;
-        left: 0;}
+        left: 0;
+        animation: scaleModal 1s linear forwards;}
 
 .modal-content {position: relative;
                 display: flex;
@@ -412,16 +413,15 @@ h1, h2, h3, h4, h5, p {margin: 0px;}
                 height: 584px;
                 top: 90px;
                 left: calc(100% - 1470px + 531px);
-                animation: scaleModal 3s linear forwards;}
+                }
 
 
 .is-hidden {visibility: hidden;}
 
 @keyframes scaleModal {
-                0% {scale: 0%;}
-                30% {scale: 30%;}
-                65% {scale: 65%;}
-                100% {scale: 100%;}}
+                0% {scale: 0;}
+                50% {scale: 0.5;}
+                100% {scale: 1;}}
 
 
 .close-button {background-color: white;
